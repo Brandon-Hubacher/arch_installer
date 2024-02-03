@@ -21,8 +21,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Set hardware clock from system clock
 hwclock --systohc
-# Don't forget to change "Europe/Berlin" with your own timezone!
-# To list the timezones: `timedatectl list-timezones`
 ln -sf /usr/share/zoneinfo/America/North_Dakota/Center /etc/localtime
 
 # Replace en_US.UTF-8 by whatever locale you want.
@@ -85,7 +83,6 @@ config_user
 echo "$name" > /tmp/user_name
 
 # Ask to install all your apps / dotfiles.
-# Don't forget to replace "Phantas0s" by the username of your Github account!
 dialog --title "Continue installation" --yesno \
 "Do you want to install all your apps and your dotfiles?" \
 10 60 \
