@@ -73,6 +73,10 @@ echo "$packages" | while read -r line; do
     fi
 done
 
+# Install pyenv
+pacman -S --needed base-devel openssl zlib xz tk
+curl https://pyenv.run | bash
+
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 curl https://raw.githubusercontent.com/Brandon-Hubacher\
